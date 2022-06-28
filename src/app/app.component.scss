@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Staatliches', cursive;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    content: '';
+    display: block;
+    width: 700px;
+    height: 700px;
+    border-radius: 150px 40px 10px 300px;
+    background: rgb(85, 251, 107);
+    z-index: 1;
+    transform: rotateZ(-30deg);
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -200px;
+    left: -300px;
+    content: '';
+    display: block;
+    width: 700px;
+    height: 700px;
+    border-radius: 150px 40px 10px 300px;
+    background: rgb(63, 81, 181);
+    z-index: 1;
+    transform: rotateZ(150deg);
+  }
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1500px) {
+    width: 100%;
+  }
+
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height:8px;
+}
+::-webkit-scrollbar-track {
+  background:transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 32, 32);
+  border-radius: 8px;
+}
+
+

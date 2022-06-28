@@ -1,0 +1,41 @@
+<div class='converter'>
+  <h1 class='title'>Currency Converter</h1>
+  <div class='inputs'>
+      <span class='inputs__subtitle'>From</span>
+      <!-- <CurrencyInput
+          currencies={Object.keys(rates)}
+          amount={amount1}
+          currency={currency1}
+          onAmountChange={handleAmount1Change}
+          onCurrencyChange={handleCurrency1Change}
+      /> -->
+      <div class='group'>
+        <input
+            type='text'
+            value="{{amount1}}"
+            (keyup)="handleAmount1Change($event)"
+        />
+        <select (change)="handleCurrency1Change($event)">
+          <option *ngFor="let currency of currencies" [selected]="currency === currency1">{{currency}}</option>
+        </select>
+      </div>
+      <span class='inputs__subtitle'>To</span>
+      <div class='group'>
+        <input
+            type='text'
+            value="{{amount2}}"
+            (keyup)="handleAmount2Change($event)"
+        />
+        <select (change)="handleCurrency2Change($event)">
+          <option *ngFor="let currency of currencies" [selected]="currency === currency2">{{currency}}</option>
+        </select>
+      </div>
+      <!-- <CurrencyInput
+          currencies={Object.keys(rates)}
+          amount={amount2}
+          currency={currency2}
+          onAmountChange={handleAmount2Change}
+          onCurrencyChange={handleCurrency2Change}
+      /> -->
+  </div>
+</div>

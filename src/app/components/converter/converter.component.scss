@@ -1,0 +1,99 @@
+.converter {
+  position: relative;
+  padding: 100px;
+  z-index: 10;
+
+  @media screen and (max-width: 1280px) {
+      padding: 50px;
+  }
+
+  @media screen and (max-width: 480px) {
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+
+  .title {
+      font-size: 35px;
+      font-family: sans-serif;
+      letter-spacing: 2px;
+      font-weight: 900;
+      opacity: 0.6;
+      margin-bottom: 30px;
+
+      @media screen and (max-width: 780px) {
+          text-align: center;
+          font-size: 25px;
+      }
+  }
+
+  .inputs {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid rgb(32, 28, 28);
+      border-radius: 20px;
+      padding: 50px;
+      border-radius: 19px;
+      //backdrop-filter: blur(6px);
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+      border: 0px rgba(255,255,255,0.4) solid;
+      border-top: 1px rgba(40,40,40,0.1) solid;
+      border-bottom: 0px rgba(40,40,40,0.35) solid;
+      border-right: 0px rgba(40,40,40,0.35) solid;
+
+      @media screen and (max-width: 780px) {
+          padding: 0px 20px 20px 20px;
+      }
+
+      @media screen and (max-width: 780px) {
+          flex-direction: column;
+      }
+
+      &__subtitle {
+          font-size: 32px;
+          font-weight: 700;
+          color: rgb(49, 63, 66);
+
+          @media screen and (max-width: 780px) {
+              margin: 20px 0px 20px 0px;
+          }
+      }
+
+      .group {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1280px) {
+            width: 35%;
+        }
+
+        @media screen and (max-width: 1280px) {
+            width: 30%;
+        }
+
+        @media screen and (max-width: 780px) {
+            width: 90%;
+        }
+
+        input {
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            background: rgb(243, 246, 246);
+            border: none;
+            border-radius: 4px 4px 0 0;
+            border-bottom: 1px solid grey;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        select {
+            padding: 25px 20px;
+            border: 1px solid #b3b1b1;
+            border-radius: 3px;
+            background: #fff;
+            font-size: 24px;
+        }
+    }
+  }
+}
